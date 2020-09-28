@@ -1,13 +1,7 @@
 def repeatedString(s, n)
     remainder =  (n % s.length)
-    remainder_arr = []
-    i = 0
-    s = s.split("").each do|el| 
-        i += 1
-    remainder_arr.push(el) unless i > remainder
-    end 
-    x = (s.count("a") * (n/s.length).floor) + remainder_arr.count("a")
-    p x
+    result = (s.count("a") * (n/s.length).floor) + s.slice(0,remainder).count("a")
+   p result
 end
 
-repeatedString("aba", 10) 
+repeatedString("aasfa;hlsaf", 10000000000000) 
